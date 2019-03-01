@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "material-popular-uikit": {
+      "root": "projects/material-popular-uikit",
+      "sourceRoot": "projects/material-popular-uikit/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/material-popular-uikit/tsconfig.lib.json",
+            "project": "projects/material-popular-uikit/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/material-popular-uikit/src/test.ts",
+            "tsConfig": "projects/material-popular-uikit/tsconfig.spec.json",
+            "karmaConfig": "projects/material-popular-uikit/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/material-popular-uikit/tsconfig.lib.json",
+              "projects/material-popular-uikit/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "material-mock-set"

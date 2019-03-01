@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "material-popular-uikit": [
+        "dist/material-popular-uikit"
+      ],
+      "material-popular-uikit/*": [
+        "dist/material-popular-uikit/*"
+      ]
+    }
   }
 }

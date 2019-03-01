@@ -1,0 +1,10 @@
+<div class="unit">
+  <figure [style.background-image]="'url(' + comment.avatarURL + ')'" (click)="clickAvatar.emit()" class="avatar"></figure>
+  <div class="body">
+    <p class="header">
+      <span class="name" (click)="clickName.emit()">{{comment.name}}</span>
+      <span class="date" (click)="clickDate.emit()">{{comment.date | date:"yyyy/MM/dd"}}</span>
+    </p>
+    <p class="text">{{comment.text}}</p>
+  </div>
+</div>
